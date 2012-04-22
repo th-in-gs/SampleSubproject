@@ -1,5 +1,5 @@
 //
-//  SampleSubproject.h
+//  SSHelloer.h
 //  SampleSubproject
 //
 //  Created by James Montgomerie on 22/04/2012.
@@ -8,4 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <SampleSubproject/SSHelloer.h>
+@interface SSHelloer : NSObject
+
+- (NSString *)hello;
+
+@end

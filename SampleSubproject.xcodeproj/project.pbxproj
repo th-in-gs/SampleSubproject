@@ -8,15 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7D4ACFFA15440222005F0FA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4ACFF915440222005F0FA2 /* Foundation.framework */; };
-		7D4AD00015440222005F0FA2 /* SampleSubproject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4ACFFF15440222005F0FA2 /* SampleSubproject.m */; };
+		7D4AD0081544053D005F0FA2 /* SSHelloer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D4AD0061544053D005F0FA2 /* SSHelloer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D4AD0091544053D005F0FA2 /* SSHelloer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4AD0071544053D005F0FA2 /* SSHelloer.m */; };
+		7D4AD00A15440980005F0FA2 /* SampleSubproject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D4ACFFE15440222005F0FA2 /* SampleSubproject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D4ACFF615440222005F0FA2 /* libSampleSubproject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSampleSubproject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4ACFF915440222005F0FA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7D4ACFFD15440222005F0FA2 /* SampleSubproject-Prefix.pch */ = {isa = PBXFileReference; path = "SampleSubproject-Prefix.pch"; sourceTree = "<group>"; };
-		7D4ACFFE15440222005F0FA2 /* SampleSubproject.h */ = {isa = PBXFileReference; path = SampleSubproject.h; sourceTree = "<group>"; };
-		7D4ACFFF15440222005F0FA2 /* SampleSubproject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleSubproject.m; sourceTree = "<group>"; };
+		7D4ACFFD15440222005F0FA2 /* SampleSubproject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleSubproject-Prefix.pch"; sourceTree = "<group>"; };
+		7D4ACFFE15440222005F0FA2 /* SampleSubproject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleSubproject.h; sourceTree = "<group>"; };
+		7D4AD0061544053D005F0FA2 /* SSHelloer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHelloer.h; sourceTree = "<group>"; };
+		7D4AD0071544053D005F0FA2 /* SSHelloer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHelloer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				7D4ACFFE15440222005F0FA2 /* SampleSubproject.h */,
-				7D4ACFFF15440222005F0FA2 /* SampleSubproject.m */,
+				7D4AD0061544053D005F0FA2 /* SSHelloer.h */,
+				7D4AD0071544053D005F0FA2 /* SSHelloer.m */,
 				7D4ACFFC15440222005F0FA2 /* Supporting Files */,
 			);
 			path = SampleSubproject;
@@ -81,6 +85,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4AD0081544053D005F0FA2 /* SSHelloer.h in Headers */,
+				7D4AD00A15440980005F0FA2 /* SampleSubproject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +116,7 @@
 		7D4ACFED15440222005F0FA2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SS;
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Things Made Out Of Other Things";
 			};
@@ -135,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D4AD00015440222005F0FA2 /* SampleSubproject.m in Sources */,
+				7D4AD0091544053D005F0FA2 /* SSHelloer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +199,7 @@
 				GCC_PREFIX_HEADER = "SampleSubproject/SampleSubproject-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/usr/local/include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -204,6 +212,7 @@
 				GCC_PREFIX_HEADER = "SampleSubproject/SampleSubproject-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/usr/local/include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
